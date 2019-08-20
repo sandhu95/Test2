@@ -65,6 +65,24 @@ public class Main{
 		System.out.println();
 		
 		}
+		
+		
+		System.out.println("information of all the Shapes entered is as given below:");
+		
+		for(int i=0; i<Shapes.size();i++) {
+			if(Shapes.get(i).getCheck()==1)
+			{
+				Square S1=(Square) Shapes.get(i);
+				S1.printInfo();
+				System.out.println(S1.getColor());
+			}
+			if(Shapes.get(i).getCheck()==2)
+			{
+				Traingle S2=(Traingle) Shapes.get(i);
+				S2.printInfo();
+			}
+		}
+		
 		keyboard.close();
 		input.close();
 		inputColor.close();
