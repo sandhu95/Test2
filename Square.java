@@ -1,5 +1,7 @@
 
 public class Square extends Shape implements TwoDimensionalShapeInterface{
+	
+	//properties
 	private double side;
 	private double area;
 	private String color;
@@ -20,6 +22,9 @@ public class Square extends Shape implements TwoDimensionalShapeInterface{
 	
 	public void printInfo() {
 		System.out.println("The area of the square is: "+ this.area);
+		System.out.println("The color of the traingle is: "+ this.color);
+		System.out.println("The dimensions of the traingle are: ");
+		System.out.println("Side: "+ this.side);
 	}
 
 

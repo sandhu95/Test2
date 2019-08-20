@@ -24,6 +24,9 @@ public class Traingle extends Shape implements TwoDimensionalShapeInterface {
 	
 	public void printInfo() {
 		System.out.println("The area of the traingle is: "+ this.area);
+		System.out.println("The color of the traingle is: "+ this.color);
+		System.out.println("The dimensions of the traingle are: ");
+		System.out.println("Height: "+ this.height+ "    "+ "Base: " + this.base);
 	}
 
 	
