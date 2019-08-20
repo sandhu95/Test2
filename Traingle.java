@@ -1,15 +1,18 @@
 
-public class Traingle  implements TwoDimensionalShapeInterface {
+public class Traingle extends Shape implements TwoDimensionalShapeInterface {
 	
 	//properties
 	private double base;
 	private double  height;
 	private double area;
-	
+	private String color;
+
+
 	//constructor
-	public Traingle(double base, double height) {
+	public Traingle(double base, double height, String color) {
 		this.base=base;
 		this.height=height;
+		this.color= color;
 	}
 	
 	//methods
@@ -48,6 +51,13 @@ public class Traingle  implements TwoDimensionalShapeInterface {
 
 	public void setArea(double area) {
 		this.area = area;
+	}
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
 	}
 	
 }

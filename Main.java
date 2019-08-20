@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main{
 
-	public static void main(String[] args) throws Exception  {
+	public static void main(String[] args)   {
 		Scanner keyboard = new Scanner(System.in);
 		int choice = 0;
 		
@@ -29,19 +29,27 @@ public class Main{
 				System.out.println("Enter the base of Trinagle");
 				double baseInput = keyboard.nextDouble();
 				
-				Traingle T= new Traingle(baseInput,heightInput);
+				System.out.println("Enter the color of Trinagle");
+				String colorInput = keyboard.nextLine();
+				
+				Traingle T= new Traingle(baseInput,heightInput,colorInput);
 				T.calculateArea();
 				T.printInfo();
+				Shapes.add(T);
 			}
 			
 			else if(choice==2)
 			{
 				System.out.println("Enter the side of Square");
-				double sidetInput = keyboard.nextDouble();	
+				double sideInput = keyboard.nextDouble();
 				
-				Square S= new Square(sidetInput);
+				System.out.println("Enter the color of Square");
+				String colorInput = keyboard.nextLine();
+				
+				Square S= new Square(sideInput,colorInput);
 				S.calculateArea();
 				S.printInfo();
+				Shapes.add(S);
 			}
 			else if(choice==3)
 			{
@@ -55,7 +63,9 @@ public class Main{
 			
 			// 3. DEBUG: Output what the user typed in 
 			System.out.println("You entered: " + choice);
-			System.out.println();
+			
+			
+		
 			keyboard.close();
 		}
 	}

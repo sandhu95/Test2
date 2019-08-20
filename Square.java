@@ -1,11 +1,13 @@
 
-public class Square implements TwoDimensionalShapeInterface{
+public class Square extends Shape implements TwoDimensionalShapeInterface{
 	private double side;
 	private double area;
+	private String color;
 
 	//constructor
-	public Square(double side) {
+	public Square(double side,String color) {
 		this.side=side;
+		this.color=color;
 	}
 	
 	
@@ -40,6 +42,14 @@ public class Square implements TwoDimensionalShapeInterface{
 
 	public void setArea(double area) {
 		this.area = area;
+	}
+	
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
 	}
 	
 
