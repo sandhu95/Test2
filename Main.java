@@ -8,6 +8,8 @@ public class Main{
 
 	public static void main(String[] args)   {
 		Scanner keyboard = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
+		Scanner inputColor= new Scanner(System.in);
 		int choice = 0;
 		
 		//arrayList of type shape
@@ -16,6 +18,7 @@ public class Main{
 		while (choice != 3) {
 			// 1. show the menu
 			showMenu();
+			System.out.println();
 	
 			// 2. get the user input
 			System.out.println("Enter a number: ");
@@ -24,13 +27,13 @@ public class Main{
 			if(choice==1)
 			{
 				System.out.println("Enter the height of Trinagle");
-				double heightInput = keyboard.nextDouble();	
+				double heightInput = input.nextDouble();	
 				
 				System.out.println("Enter the base of Trinagle");
-				double baseInput = keyboard.nextDouble();
+				double baseInput = input.nextDouble();
 				
 				System.out.println("Enter the color of Trinagle");
-				String colorInput = keyboard.nextLine();
+				String colorInput = inputColor.nextLine();
 				
 				Traingle T= new Traingle(baseInput,heightInput,colorInput);
 				T.calculateArea();
@@ -41,10 +44,10 @@ public class Main{
 			else if(choice==2)
 			{
 				System.out.println("Enter the side of Square");
-				double sideInput = keyboard.nextDouble();
+				double sideInput = input.nextDouble();
 				
 				System.out.println("Enter the color of Square");
-				String colorInput = keyboard.nextLine();
+				String colorInput = inputColor.nextLine();
 				
 				Square S= new Square(sideInput,colorInput);
 				S.calculateArea();
@@ -59,15 +62,12 @@ public class Main{
 			{
 				System.out.println("Enter a valid choice");
 			}
-			
-			
-			// 3. DEBUG: Output what the user typed in 
-			System.out.println("You entered: " + choice);
-			
-			
+		System.out.println();
 		
-			keyboard.close();
 		}
+		keyboard.close();
+		input.close();
+		inputColor.close();
 	}
 	
 	public static void showMenu() {
