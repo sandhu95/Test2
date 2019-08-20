@@ -2,6 +2,7 @@
 public class Shape {
 	
 	//properties
+	
 	 int check=0;
 
 	
