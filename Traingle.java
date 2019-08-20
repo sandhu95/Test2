@@ -1,38 +1,53 @@
 
-public class Traingle {
+public class Traingle  implements TwoDimensionalShapeInterface {
 	
 	//properties
-	private int base;
-	private int  height;
+	private double base;
+	private double  height;
+	private double area;
 	
 	//constructor
-	public Traingle(int base, int height) {
+	public Traingle(double base, double height) {
 		this.base=base;
 		this.height=height;
 	}
 	
 	//methods
-	public void calculateArea() {
-		double area= (0.5)*this.base* this.height;
-		System.out.println("The area of the square is: "+ area);
+	public double calculateArea() {
+		this.area= (0.5)*this.base* this.height;
+		//System.out.println("The area of the square is: "+ area);
+		return area;
 	}
+	
+	public void printInfo() {
+		System.out.println("The area of the traingle is: "+ this.area);
+	}
+
 	
 	
 	//getters and setters
-	public int getBase() {
+	public double getBase() {
 		return base;
 	}
 
-	public void setBase(int base) {
+	public void setBase(double base) {
 		this.base = base;
 	}
 
-	public int getHeight() {
+	public double getHeight() {
 		return height;
 	}
 
-	public void setHeight(int height) {
+	public void setHeight(double height) {
 		this.height = height;
 	}
 
+	public double getArea() {
+		return area;
+	}
+
+	public void setArea(double area) {
+		this.area = area;
+	}
+	
 }

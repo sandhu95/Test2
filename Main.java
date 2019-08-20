@@ -4,16 +4,16 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class Main{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception  {
 		Scanner keyboard = new Scanner(System.in);
 		int choice = 0;
 		
 		//arrayList of type shape
 		ArrayList<Shape> Shapes= new ArrayList<Shape>();
 		
-		while (choice != 4) {
+		while (choice != 3) {
 			// 1. show the menu
 			showMenu();
 	
@@ -24,22 +24,32 @@ public class Main {
 			if(choice==1)
 			{
 				System.out.println("Enter the height of Trinagle");
-				int heightInput = keyboard.nextInt();	
+				double heightInput = keyboard.nextDouble();	
 				
 				System.out.println("Enter the base of Trinagle");
-				int baseInput = keyboard.nextInt();
+				double baseInput = keyboard.nextDouble();
 				
 				Traingle T= new Traingle(baseInput,heightInput);
 				T.calculateArea();
+				T.printInfo();
 			}
 			
 			else if(choice==2)
 			{
 				System.out.println("Enter the side of Square");
-				int sidetInput = keyboard.nextInt();	
+				double sidetInput = keyboard.nextDouble();	
 				
 				Square S= new Square(sidetInput);
 				S.calculateArea();
+				S.printInfo();
+			}
+			else if(choice==3)
+			{
+				System.out.println("Thank You, Bye!");
+			}
+			else
+			{
+				System.out.println("Enter a valid choice");
 			}
 			
 			
