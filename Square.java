@@ -6,13 +6,13 @@ public class Square extends Shape implements TwoDimensionalShapeInterface{
 	private double area;
 	private String color;
 	
-	Shape Sh = new Shape();
+	
 
 	//constructor
 	public Square(double side,String color) {
 		this.side=side;
 		this.color=color;
-		Sh.setCheck(1);
+		super.check=1;
 	}
 	
 	

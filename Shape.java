@@ -2,7 +2,7 @@
 public class Shape {
 	
 	//properties
-	private int check=0;
+	 int check=0;
 
 	
 	//getters and setters

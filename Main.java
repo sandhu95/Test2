@@ -15,6 +15,8 @@ public class Main{
 		//arrayList of type shape
 		ArrayList<Shape> Shapes= new ArrayList<Shape>();
 		
+		try
+		{
 		while (choice != 3) {
 			// 1. show the menu
 			showMenu();
@@ -65,21 +67,30 @@ public class Main{
 		System.out.println();
 		
 		}
+		}
+		catch(Exception e)//handling the exceptions
+		{
+			System.out.println("sorry, you entered wrong type of value.");
+		}
 		
-		
+		if(Shapes.size()>0)
 		System.out.println("information of all the Shapes entered is as given below:");
 		
+		System.out.println();
+		
+		//printing the elements of the arrayList
 		for(int i=0; i<Shapes.size();i++) {
 			if(Shapes.get(i).getCheck()==1)
 			{
 				Square S1=(Square) Shapes.get(i);
 				S1.printInfo();
-				System.out.println(S1.getColor());
+				System.out.println();
 			}
 			if(Shapes.get(i).getCheck()==2)
 			{
 				Traingle S2=(Traingle) Shapes.get(i);
 				S2.printInfo();
+				System.out.println();
 			}
 		}
 		
